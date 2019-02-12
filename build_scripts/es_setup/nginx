@@ -1,0 +1,9 @@
+vagrant ALL=(ALL) NOPASSWD: /usr/bin/systemctl start rh-nginx18-nginx
+vagrant ALL=(ALL) NOPASSWD: /usr/bin/systemctl stop rh-nginx18-nginx
+vagrant ALL=(ALL) NOPASSWD: /usr/bin/systemctl reload rh-nginx18-nginx
+vagrant ALL=(ALL) NOPASSWD: /usr/bin/systemctl configtest rh-nginx18-nginx
+vagrant ALL=(ALL) NOPASSWD: /usr/bin/systemctl status rh-nginx18-nginx
+vagrant ALL=(ALL) NOPASSWD: /usr/bin/systemctl force-reload rh-nginx18-nginx
+vagrant ALL=(ALL) NOPASSWD: /usr/bin/systemctl upgrade rh-nginx18-nginx
+vagrant ALL=(ALL) NOPASSWD: /usr/bin/systemctl restart rh-nginx18-nginx
+vagrant ALL=(ALL) NOPASSWD: /usr/bin/systemctl reopen_logs rh-nginx18-nginx

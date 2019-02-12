@@ -1,0 +1,6 @@
+vagrant ALL=(ALL) NOPASSWD: /usr/bin/systemctl start rh-redis32-redis
+vagrant ALL=(ALL) NOPASSWD: /usr/bin/systemctl stop rh-redis32-redis
+vagrant ALL=(ALL) NOPASSWD: /usr/bin/systemctl status rh-redis32-redis
+vagrant ALL=(ALL) NOPASSWD: /usr/bin/systemctl restart rh-redis32-redis
+vagrant ALL=(ALL) NOPASSWD: /usr/bin/systemctl condrestart rh-redis32-redis
+vagrant ALL=(ALL) NOPASSWD: /usr/bin/systemctl try-restart rh-redis32-redis

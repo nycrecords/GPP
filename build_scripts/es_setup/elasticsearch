@@ -1,0 +1,8 @@
+vagrant ALL=(ALL) NOPASSWD: /usr/bin/systemctl start elasticsearch
+vagrant ALL=(ALL) NOPASSWD: /usr/bin/systemctl stop elasticsearch
+vagrant ALL=(ALL) NOPASSWD: /usr/bin/systemctl status elasticsearch
+vagrant ALL=(ALL) NOPASSWD: /usr/bin/systemctl restart elasticsearch
+vagrant ALL=(ALL) NOPASSWD: /usr/bin/systemctl condrestart elasticsearch
+vagrant ALL=(ALL) NOPASSWD: /usr/bin/systemctl try-restart elasticsearch
+vagrant ALL=(ALL) NOPASSWD: /usr/bin/systemctl reload elasticsearch
+vagrant ALL=(ALL) NOPASSWD: /usr/bin/systemctl force-reload elasticsearch
