@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %} - GPP</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/plugins/bootstrap.min.css') }}"/>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles/base.css') }}"/>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles/nyc_gov.css') }}"/>
+
+    {% block custom_css %}
+    {% endblock %}
+</head>
+
+<body>
+{% block navbar %}
+    {% include '_nyc_gov_header.html' %}
+{% endblock %}
+
+<div class="container">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% for category, message in messages %}
+            <div class="alert alert-{{ category }} fade in"></div>
+            <button type="button" class="close" data-dismiss="alert">x</button>
+            {{ message }}
+        {% endfor %}
+    {% endwith %}
+</div>
+
+<div id="footer">
+</div>
+
+<div id="wrapper-content">
+    {% block content %}
+    {% endblock %}
+</div>
+
+{% include "_nyc_gov_footer.html" %}
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/plugins/jquery-3.3.1.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/plugins/popper.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/plugins/bootstrap.min.js') }}"></script>
+{% block custom_script %}
+{% endblock %}
+</body>
+</html>

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source /opt/rh/rh-python35/enable
+source /opt/rh/rh-python36/enable
 
 mkdir /home/vagrant/.virtualenvs
 virtualenv --system-site-packages /home/vagrant/.virtualenvs/gpp

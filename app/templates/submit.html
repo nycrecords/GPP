@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Submit a Publication
+{% endblock %}
+
+{% block content %}
+    <form method="post" class="form" role="form" id="submit-form" enctype="multipart/form-data">
+        <div class="form-group">
+            {{ form.title.label(for="title") }}
+            {{ form.title(id="title", class="form-control", minlength=10, maxlength=150, required=True) }}
+        </div>
+        <div class="form-group">
+            {{ form.subtitle.label(for="subtitle") }}
+            {{ form.subtitle(id="subtitle", class="form-control", maxlength=150) }}
+        </div>
+        <div class="form-group">
+            {{ form.agency.label(for="agency") }}
+            {{ form.agency(id="agency", class="form-control", required=True) }}
+        </div>
+        <div class="form-group">
+            {{ form.additional_creators.label(for="additional_creators") }}
+            {{ form.additional_creators(id="additional_creators", class="form-control", maxlength=150) }}
+        </div>
+        <div class="form-group">
+            {{ form.subjects.label(for="subjects") }}
+            {{ form.subjects(id="subjects", class="form-control", required=True) }}
+        </div>
+        <div class="form-group">
+            {{ form.description.label(for="description") }}
+            {{ form.description(id="description", class="form-control", minlength=100, maxlength=200, required=True) }}
+        </div>
+        <div class="form-group">
+            {{ form.date_published.label(for="date_published") }}
+            {{ form.date_published(id="date_published", class="form-control", required=True) }}
+        </div>
+        <div class="form-group">
+            {{ form.report_type.label(for="report_type") }}
+            {{ form.report_type(id="report_type", class="form-control", required=True) }}
+        </div>
+        <div class="form-group">
+            {{ form.fiscal_year.label(for="fiscal_year") }}
+            {{ form.fiscal_year(id="fiscal_year", class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.calendar_year.label(for="calendar_year") }}
+            {{ form.calendar_year(id="calendar_year", class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.borough.label(for="borough") }}
+            {{ form.borough(id="borough", class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.school_district.label(for="school_district") }}
+            {{ form.school_district(id="school_district", class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.place_other.label(for="place_other") }}
+            {{ form.place_other(id="place_other", class="form-control") }}
+        </div>
+    </form>
+{% endblock %}

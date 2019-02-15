@@ -1,18 +1,18 @@
 #!/usr/bin/env bash
 
 # 1. Install Python 3.5
-yum -y install rh-python35
+yum -y install rh-python36
 
 # 2. Install Redis 3.2
 yum -y install rh-redis32
 sudo chkconfig rh-redis32-redis on
 
 # 3. Setup /etc/profile.d/python.sh
-bash -c "printf '#\!/bin/bash\nsource /opt/rh/rh-python35/enable\n' > /etc/profile.d/python35.sh"
+bash -c "printf '#\!/bin/bash\nsource /opt/rh/rh-python36/enable\n' > /etc/profile.d/python36.sh"
 
 # 4. Install Postgres Python Package (psycopg2) and Postgres Developer Package
 yum -y install rh-postgresql95-postgresql-devel
-yum -y install rh-python35-python-psycopg2
+yum -y install rh-python36-python-psycopg2
 yum -y install openssl-devel
 yum -y install libffi-devel
 yum -y install libjpeg-devel
@@ -40,7 +40,7 @@ openssl req \
 yum -y groupinstall "Development Tools"
 
 # 7. Install Required pip Packages
-source /opt/rh/rh-python35/enable
+source /opt/rh/rh-python36/enable
 pip install virtualenv
 pip install --upgrade pip setuptools
 

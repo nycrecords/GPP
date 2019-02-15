@@ -1,0 +1,10 @@
+#wrapper-content {
+    min-height: 100%;
+    /*max-width: calc(940px + 20px);*/
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 200px;
+}
