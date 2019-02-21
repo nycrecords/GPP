@@ -20,7 +20,7 @@ class SubmitForm(FlaskForm):
     description = TextAreaField('Description', validators=[DataRequired(), Length(min=100, max=200)])
     date_published = DateField('Date Published', validators=[DataRequired()])
     report_type = SelectField('Report Type', choices=[], validators=[DataRequired()])
-    fiscal_year = IntegerField('Associated Year - Fiscal', validators=[Optional()])  # TODO (gzhou): One of fiscal or calendar is required
+    fiscal_year = IntegerField('Associated Year - Fiscal', validators=[Optional(), Length(max=4)])  # TODO (gzhou): One of fiscal or calendar is required
     calendar_year = IntegerField('Associated Year - Calendar', validators=[Optional()])
     borough = SelectMultipleField('Associated Borough(s)', choices=[], validators=[Optional()])
     school_district = SelectMultipleField('Associated School District(s)', choices=[], validators=[Optional()])
