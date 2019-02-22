@@ -1,0 +1,71 @@
+DISTRICT_1 = 'District 1'
+DISTRICT_2 = 'District 2'
+DISTRICT_3 = 'District 3'
+DISTRICT_4 = 'District 4'
+DISTRICT_5 = 'District 5'
+DISTRICT_6 = 'District 6'
+DISTRICT_7 = 'District 7'
+DISTRICT_8 = 'District 8'
+DISTRICT_9 = 'District 9'
+DISTRICT_10 = 'District 10'
+DISTRICT_11 = 'District 11'
+DISTRICT_12 = 'District 12'
+DISTRICT_13 = 'District 13'
+DISTRICT_14 = 'District 14'
+DISTRICT_15 = 'District 15'
+DISTRICT_16 = 'District 16'
+DISTRICT_17 = 'District 17'
+DISTRICT_18 = 'District 18'
+DISTRICT_19 = 'District 19'
+DISTRICT_20 = 'District 20'
+DISTRICT_21 = 'District 21'
+DISTRICT_22 = 'District 22'
+DISTRICT_23 = 'District 23'
+DISTRICT_24 = 'District 24'
+DISTRICT_25 = 'District 25'
+DISTRICT_26 = 'District 26'
+DISTRICT_27 = 'District 27'
+DISTRICT_28 = 'District 28'
+DISTRICT_29 = 'District 29'
+DISTRICT_30 = 'District 30'
+DISTRICT_31 = 'District 31'
+DISTRICT_32 = 'District 32'
+DISTRICT_75 = 'District 75'
+DISTRICT_79 = 'District 79'
+
+SCHOOL_DISTRICT_LIST = [
+    DISTRICT_1,
+    DISTRICT_2,
+    DISTRICT_3,
+    DISTRICT_4,
+    DISTRICT_5,
+    DISTRICT_6,
+    DISTRICT_7,
+    DISTRICT_8,
+    DISTRICT_9,
+    DISTRICT_10,
+    DISTRICT_11,
+    DISTRICT_12,
+    DISTRICT_13,
+    DISTRICT_14,
+    DISTRICT_15,
+    DISTRICT_16,
+    DISTRICT_17,
+    DISTRICT_18,
+    DISTRICT_19,
+    DISTRICT_20,
+    DISTRICT_21,
+    DISTRICT_22,
+    DISTRICT_23,
+    DISTRICT_24,
+    DISTRICT_25,
+    DISTRICT_26,
+    DISTRICT_27,
+    DISTRICT_28,
+    DISTRICT_29,
+    DISTRICT_30,
+    DISTRICT_31,
+    DISTRICT_32,
+    DISTRICT_75,
+    DISTRICT_79,
+]

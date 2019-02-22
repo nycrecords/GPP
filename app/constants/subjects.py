@@ -1,0 +1,363 @@
+ACCOUNTING = 'Accounting'
+ADVERTISING = 'Advertising'
+AGED = 'Aged'
+ALCOHOL = 'Alcohol'
+ANIMAL_WELFARE = 'Animal Welfare'
+ARCHAEOLOGY = 'Archaeology'
+ARCHITECTURE = 'Architecture'
+ART_AND_DESIGN = 'Art and Design'
+ATHLETICS = 'Athletics'
+BANKS_AND_BANKING = 'Banks and Banking'
+BROOKLYN = 'Brooklyn'
+BRONX = 'Bronx'
+BUDGET_AND_FINANCE = 'Budget and Finance'
+BUILDING_CODE = 'Building Code'
+BUILDING_CONSTRUCTION = 'Building Construction'
+BUILDINGS = 'Buildings'
+BUSINESS = 'Business'
+CELEBRATIONS_AND_PARADES = 'Celebrations and Parades'
+CEMETERIES = 'Cemeteries'
+CENSUS = 'Census'
+CHARITIES = 'Charities'
+CHILDREN = 'Children'
+CITY_PLANNING = 'City Planning'
+CIVIL_SERVICE = 'Civil Service'
+CLIMATE = 'Climate'
+COASTAL = 'Coastal'
+COMMUNITY_RELATIONS = 'Community Relations'
+CONSUMERS = 'Consumers'
+CONVENTIONS = 'Conventions'
+CORRECTION = 'Correction'
+COST = 'Cost'
+COURTS = 'Courts'
+CRIME_AND_CRIMINALS = 'Crime and Criminals'
+CRIMINAL_JUSTICE = 'Criminal Justice'
+CULTURE = 'Culture'
+DATA_AND_COMMUNICATIONS = 'Data and Communications'
+DEATH = 'Death'
+DEMOGRAPHY_AND_POPULATION = 'Demography and Population'
+DISABILITY = 'Disability'
+DISCRIMINATION = 'Discrimination'
+DISEASES = 'Diseases'
+DRUGS = 'Drugs'
+EDUCATION = 'Education'
+ELECTIONS_AND_VOTING = 'Elections and Voting'
+ELECTRIC_POWER = 'Electric Power'
+EMERGENCIES = 'Emergencies'
+EMPLOYMENT = 'Employment'
+ENERGY = 'Energy'
+ENGINEERING = 'Engineering'
+ENVIRONMENT = 'Environment'
+EQUAL_EMPLOYMENT = 'Equal Employment'
+ETHICS = 'Ethics'
+ETHNIC_GROUPS = 'Ethnic groups'
+FAMILIES = 'Families'
+FINANCE = 'Finance'
+FIRE_FIGHTING = 'Fire Fighting'
+FIREARMS = 'Firearms'
+FOOD = 'Food'
+FOOD_SUPPLY = 'Food supply'
+FUELS = 'Fuels'
+GAMBLING = 'Gambling'
+GEOGRAPHY = 'Geography'
+GOVERNMENT = 'Government'
+GOVERNMENT_CITIZEN_PARTICIPATION = 'Government - Citizen participation'
+HAZARDOUS_MATERIALS = 'Hazardous Materials'
+HEALTH = 'Health'
+HISTORY = 'History'
+HOMELESS_PERSONS = 'Homeless Persons'
+HOSPITALS = 'Hospitals'
+HOTELS = 'Hotels'
+HOUSING = 'Housing'
+HOUSING_LIMITED_PROFIT = 'Housing - Limited Profit'
+HOUSING_LOW_INCOME = 'Housing - Low Income'
+HUMAN_RIGHTS = 'Human Rights'
+IMMIGRATION = 'Immigration'
+INDUSTRIES = 'Industries'
+INFRASTRUCTURE = 'Infrastructure'
+INSURANCE = 'Insurance'
+INTERNET = 'Internet'
+ISLANDS = 'Islands'
+LABOR_AND_EMPLOYMENT = 'Labor and Employment'
+LAND_USE = 'Land Use'
+LANDMARKS = 'Landmarks'
+LANGUAGES = 'Languages'
+LAWS_AND_LEGISLATION = 'Laws and legislation'
+LGBTQ_LESBIAN_GAY_BISEXUAL_TRANSGENDER_QUEER_OR_QUESTIONING = 'LGBTQ (Lesbian / Gay / Bisexual / Transgender / Queer or Questioning)'
+LIBRARIES = 'Libraries'
+LICENSES_AND_PERMITS = 'Licenses and Permits'
+MANHATTAN = 'Manhattan'
+MAPS = 'Maps'
+MARKETS = 'Markets'
+MAYOR_NAME = 'Mayor (Name)'
+MEMORIALS = 'Memorials'
+MENTAL_HEALTH = 'Mental Health'
+MONUMENTS = 'Monuments'
+MOTOR_VEHICLES = 'Motor Vehicles'
+MUSEUMS = 'Museums'
+NEIGHBORHOODS = 'Neighborhoods'
+NUTRITION = 'Nutrition'
+OFFICIALS_AND_EMPLOYEES = 'Officials and Employees'
+PARKING = 'Parking'
+PARKS_AND_RECREATION = 'Parks and Recreation'
+PENSIONS = 'Pensions'
+PESTS = 'Pests'
+POLICE = 'Police'
+POLICE_COMMUNITY_RELATIONS = 'Police - Community Relations'
+POLICE_DISCIPLINE = 'Police - Discipline'
+POLITICS_AND_GOVERNMENT = 'Politics and Government'
+POLLUTION = 'Pollution'
+POVERTY = 'Poverty'
+PRICES = 'Prices'
+PURCHASING_METHODS = 'Purchasing Methods'
+PUBLIC_AUTHORITIES = 'Public Authorities'
+PUBLIC_WELFARE = 'Public Welfare'
+QUEENS = 'Queens'
+REAL_PROPERTY = 'Real Property'
+RECORDS = 'Records'
+RECREATION = 'Recreation'
+RECYCLING = 'Recycling'
+REFUSE_AND_REFUSE_DISPOSAL = 'Refuse and Refuse Disposal'
+RELIGIONS = 'Religions'
+RENT_CONTROL = 'Rent Control'
+RENT_STABILIZATION_LAW = 'Rent Stabilization Law'
+RESTAURANTS = 'Restaurants'
+RETAIL = 'Retail'
+RIVERS = 'Rivers'
+SANITATION = 'Sanitation'
+SCHOOLS = 'Schools'
+SCHOOLS_ADMINISTRATION = 'Schools - Administration'
+SCHOOLS_CHARTER = 'Schools - Charter'
+SCHOOLS_PAROCHIAL = 'Schools - Parochial'
+SCHOOLS_PRIVATE = 'Schools - Private'
+SCHOOLS_BUILDINGS = 'Schools - Buildings'
+SEWAGE = 'Sewage'
+SMALL_BUSINESS = 'Small Business'
+SNOW_REMOVAL = 'Snow Removal'
+SPECIAL_DISTRICTS = 'Special Districts'
+STATE_OF_NEW_YORK = 'State of New York'
+STATEN_ISLAND = 'Staten Island'
+STATISTICS = 'Statistics'
+STREET_VENDORS = 'Street Vendors'
+STREETS_MAINTENANCE_AND_REPAIR = 'Streets - Maintenance and Repair'
+STREETS_AND_HIGHWAYS = 'Streets and Highways'
+STUDENTS = 'Students'
+SUBWAYS = 'Subways'
+SUBWAYS_STATIONS = 'Subways - Stations'
+SUPPLIES = 'Supplies'
+SURVEYING = 'Surveying'
+TAXATION = 'Taxation'
+TAXATION_EXEMPTION_FROM = 'Taxation - Exemption from'
+TAXATION_REAL_PROPERTY = 'Taxation - Real Property'
+TAXICABS = 'Taxicabs'
+TEACHERS = 'Teachers'
+TELEVISION = 'Television'
+TERMINALS = 'Terminals'
+TERRORISM = 'Terrorism'
+TOILETS = 'Toilets'
+TOLLS = 'Tolls'
+TOURISTS = 'Tourists'
+TRAFFIC_AND_PARKING = 'Traffic and Parking'
+TRAFFIC_SAFETY = 'Traffic Safety'
+TRANSIT = 'Transit'
+TRANSIT_RAPID = 'Transit - Rapid'
+TRANSPORTATION = 'Transportation'
+TRANSPORTATION_FINANCE = 'Transportation - Finance'
+TRANSPORTATION_SCHOOL = 'Transportation - School'
+TRANSPORTATION_PLANNING = 'Transportation- Planning'
+TREES = 'Trees'
+TRUSTS_AND_ESTATES = 'Trusts and Estates'
+UNIVERSITIES_AND_COLLEGES = 'Universities and Colleges'
+VENDORS_AND_CONTRACTS = 'Vendors and Contracts'
+VETERANS = 'Veterans'
+VOLUNTEERS = 'Volunteers'
+WATER = 'Water'
+WATER_SUPPLY = 'Water Supply'
+WEAPONS = 'Weapons'
+WEATHER = 'Weather'
+WOMEN = 'Women'
+WORLD_TRADE_CENTER = 'World Trade Center'
+YOUTH = 'Youth'
+
+SUBJECTS_LIST = [
+    ACCOUNTING,
+    ADVERTISING,
+    AGED,
+    ALCOHOL,
+    ANIMAL_WELFARE,
+    ARCHAEOLOGY,
+    ARCHITECTURE,
+    ART_AND_DESIGN,
+    ATHLETICS,
+    BANKS_AND_BANKING,
+    BROOKLYN,
+    BRONX,
+    BUDGET_AND_FINANCE,
+    BUILDING_CODE,
+    BUILDING_CONSTRUCTION,
+    BUILDINGS,
+    BUSINESS,
+    CELEBRATIONS_AND_PARADES,
+    CEMETERIES,
+    CENSUS,
+    CHARITIES,
+    CHILDREN,
+    CITY_PLANNING,
+    CIVIL_SERVICE,
+    CLIMATE,
+    COASTAL,
+    COMMUNITY_RELATIONS,
+    CONSUMERS,
+    CONVENTIONS,
+    CORRECTION,
+    COST,
+    COURTS,
+    CRIME_AND_CRIMINALS,
+    CRIMINAL_JUSTICE,
+    CULTURE,
+    DATA_AND_COMMUNICATIONS,
+    DEATH,
+    DEMOGRAPHY_AND_POPULATION,
+    DISABILITY,
+    DISCRIMINATION,
+    DISEASES,
+    DRUGS,
+    EDUCATION,
+    ELECTIONS_AND_VOTING,
+    ELECTRIC_POWER,
+    EMERGENCIES,
+    EMPLOYMENT,
+    ENERGY,
+    ENGINEERING,
+    ENVIRONMENT,
+    EQUAL_EMPLOYMENT,
+    ETHICS,
+    ETHNIC_GROUPS,
+    FAMILIES,
+    FINANCE,
+    FIRE_FIGHTING,
+    FIREARMS,
+    FOOD,
+    FOOD_SUPPLY,
+    FUELS,
+    GAMBLING,
+    GEOGRAPHY,
+    GOVERNMENT,
+    GOVERNMENT_CITIZEN_PARTICIPATION,
+    HAZARDOUS_MATERIALS,
+    HEALTH,
+    HISTORY,
+    HOMELESS_PERSONS,
+    HOSPITALS,
+    HOTELS,
+    HOUSING,
+    HOUSING_LIMITED_PROFIT,
+    HOUSING_LOW_INCOME,
+    HUMAN_RIGHTS,
+    IMMIGRATION,
+    INDUSTRIES,
+    INFRASTRUCTURE,
+    INSURANCE,
+    INTERNET,
+    ISLANDS,
+    LABOR_AND_EMPLOYMENT,
+    LAND_USE,
+    LANDMARKS,
+    LANGUAGES,
+    LAWS_AND_LEGISLATION,
+    LGBTQ_LESBIAN_GAY_BISEXUAL_TRANSGENDER_QUEER_OR_QUESTIONING,
+    LIBRARIES,
+    LICENSES_AND_PERMITS,
+    MANHATTAN,
+    MAPS,
+    MARKETS,
+    MAYOR_NAME,
+    MEMORIALS,
+    MENTAL_HEALTH,
+    MONUMENTS,
+    MOTOR_VEHICLES,
+    MUSEUMS,
+    NEIGHBORHOODS,
+    NUTRITION,
+    OFFICIALS_AND_EMPLOYEES,
+    PARKING,
+    PARKS_AND_RECREATION,
+    PENSIONS,
+    PESTS,
+    POLICE,
+    POLICE_COMMUNITY_RELATIONS,
+    POLICE_DISCIPLINE,
+    POLITICS_AND_GOVERNMENT,
+    POLLUTION,
+    POVERTY,
+    PRICES,
+    PURCHASING_METHODS,
+    PUBLIC_AUTHORITIES,
+    PUBLIC_WELFARE,
+    QUEENS,
+    REAL_PROPERTY,
+    RECORDS,
+    RECREATION,
+    RECYCLING,
+    REFUSE_AND_REFUSE_DISPOSAL,
+    RELIGIONS,
+    RENT_CONTROL,
+    RENT_STABILIZATION_LAW,
+    RESTAURANTS,
+    RETAIL,
+    RIVERS,
+    SANITATION,
+    SCHOOLS,
+    SCHOOLS_ADMINISTRATION,
+    SCHOOLS_CHARTER,
+    SCHOOLS_PAROCHIAL,
+    SCHOOLS_PRIVATE,
+    SCHOOLS_BUILDINGS,
+    SEWAGE,
+    SMALL_BUSINESS,
+    SNOW_REMOVAL,
+    SPECIAL_DISTRICTS,
+    STATE_OF_NEW_YORK,
+    STATEN_ISLAND,
+    STATISTICS,
+    STREET_VENDORS,
+    STREETS_MAINTENANCE_AND_REPAIR,
+    STREETS_AND_HIGHWAYS,
+    STUDENTS,
+    SUBWAYS,
+    SUBWAYS_STATIONS,
+    SUPPLIES,
+    SURVEYING,
+    TAXATION,
+    TAXATION_EXEMPTION_FROM,
+    TAXATION_REAL_PROPERTY,
+    TAXICABS,
+    TEACHERS,
+    TELEVISION,
+    TERMINALS,
+    TERRORISM,
+    TOILETS,
+    TOLLS,
+    TOURISTS,
+    TRAFFIC_AND_PARKING,
+    TRAFFIC_SAFETY,
+    TRANSIT,
+    TRANSIT_RAPID,
+    TRANSPORTATION,
+    TRANSPORTATION_FINANCE,
+    TRANSPORTATION_SCHOOL,
+    TRANSPORTATION_PLANNING,
+    TREES,
+    TRUSTS_AND_ESTATES,
+    UNIVERSITIES_AND_COLLEGES,
+    VENDORS_AND_CONTRACTS,
+    VETERANS,
+    VOLUNTEERS,
+    WATER,
+    WATER_SUPPLY,
+    WEAPONS,
+    WEATHER,
+    WOMEN,
+    WORLD_TRADE_CENTER,
+    YOUTH,
+]
