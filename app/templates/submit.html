@@ -4,70 +4,118 @@
     Submit a Publication
 {% endblock %}
 
+{% block custom_css %}
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles/submit.css') }}"/>
+{% endblock %}
+
+
 {% block content %}
-    <h1>Submit a Publication</h1>
-    <p>Welcome to the Submissions Portal for the Municipal Library at the New York City Department of Records and
-        Information Services. The Submissions Portal is a convenient, secure online system for New York City agencies to
-        electronically submit their publications to the Government Publications Portal of the Municipal Library.
-    <p>Complete the information (metadata) in the automated form and upload your document. You will receive
-        confirmation that you have successfully uploaded the publication, or a warning if there is any problem with the
-        publication after virus scanning. The Municipal Library staff checks that everything is in order and the
-        publication is loaded into the Government Documents Portal, where it is accessible and preserved.
-    <form method="post" class="form" role="form" id="submit-form" enctype="multipart/form-data">
-        <div class="form-group">
-            {{ form.title.label(for="title") }}
-            {{ form.title(id="title", class="form-control", minlength="10", maxlength="150") }}
-        </div>
-        <div class="form-group">
-            {{ form.subtitle.label(for="subtitle") }}
-            {{ form.subtitle(id="subtitle", class="form-control", maxlength="150") }}
-        </div>
-        <div class="form-group">
-            {{ form.agency.label(for="agency") }}
-            {{ form.agency(id="agency", class="form-control") }}
-        </div>
-        <div class="form-group">
-            {{ form.additional_creators.label(for="additional_creators") }}
-            {{ form.additional_creators(id="additional_creators", class="form-control", maxlength="150") }}
-        </div>
-        <div class="form-group">
-            {{ form.subjects.label(for="subjects") }}
-            {{ form.subjects(id="subjects", class="form-control") }}
-        </div>
-        <div class="form-group">
-            {{ form.description.label(for="description") }}
-            {{ form.description(id="description", class="form-control", minlength="100", maxlength="200") }}
-        </div>
-        <div class="form-group">
-            {{ form.date_published.label(for="date_published") }}
-            {{ form.date_published(id="date_published", class="form-control") }}
-        </div>
-        <div class="form-group">
-            {{ form.report_type.label(for="report_type") }}
-            {{ form.report_type(id="report_type", class="form-control") }}
-        </div>
-        <div class="form-group col-md-9 offset-md-3">
-            {{ form.fiscal_year.label(for="fiscal_year") }}
-            {{ form.fiscal_year(id="fiscal_year", class="form-control", maxlength="4") }}
-        </div>
-        <div class="form-group">
-            {{ form.calendar_year.label(for="calendar_year") }}
-            {{ form.calendar_year(id="calendar_year", class="form-control") }}
-        </div>
-        <div class="form-group">
-            {{ form.borough.label(for="borough") }}
-            {{ form.borough(id="borough", class="form-control") }}
-        </div>
-        <div class="form-group">
-            {{ form.school_district.label(for="school_district") }}
-            {{ form.school_district(id="school_district", class="form-control") }}
-        </div>
-        <div class="form-group">
-            {{ form.place_other.label(for="place_other") }}
-            {{ form.place_other(id="place_other", class="form-control") }}
-        </div>
-        <div class="form-group">
-            {{ form.submit_field(class="btn btn-primary") }}
-        </div>
-    </form>
+    <div id="submission" role="main">
+        <h1>Submit a Publication</h1>
+        <p>Welcome to the Submissions Portal for the Municipal Library at the New York City Department of Records and
+            Information Services. The Submissions Portal is a convenient, secure online system for New York City agencies to
+            electronically submit their publications to the Government Publications Portal of the Municipal Library.</p>
+        <p>Complete the information (metadata) in the automated form and upload your document. You will receive
+            confirmation that you have successfully uploaded the publication, or a warning if there is any problem with the
+            publication after virus scanning. The Municipal Library staff checks that everything is in order and the
+            publication is loaded into the Government Documents Portal, where it is accessible and preserved.</p>
+        <br>
+        <form method="post" class="form" role="form" id="submit-form" enctype="multipart/form-data">
+            <div class="form-group">
+                {{ form.title.label(for="title", class="field-label") }}
+                <p>On the front page, the first page or in the Executive Summary (if any) of the document,
+                    what is it called? 10-150 characters.</p>
+                {{ form.title(id="title", class="form-control", minlength="10", maxlength="150") }}
+                <p id="title-character-count" class="character-counter">150 characters remaining</p>
+            </div>
+            <div class="form-group">
+                {{ form.subtitle.label(for="subtitle", class="field-label") }}
+                <p>The remainder of the document's title, if any. 150 characters or fewer.</p>
+                {{ form.subtitle(id="subtitle", class="form-control", maxlength="150") }}
+            </div>
+            <div class="form-group">
+                {{ form.agency.label(for="agency", class="field-label") }}
+                <p>What agency is the primary creator of this document?</p>
+                {{ form.agency(id="agency", class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.additional_creators.label(for="additional_creators", class="field-label") }}
+                <p>What other agencies, consultants, or authors, if any, contributed to the creation of this document?</p>
+                {{ form.additional_creators(id="additional_creators", class="form-control", maxlength="150") }}
+            </div>
+            <div class="form-group">
+                {{ form.subjects.label(for="subjects", class="field-label") }}
+                <p>Select what subjects you feel are the most relevant subjects covered in this report.
+                    Pick up to three.</p>
+                {{ form.subjects(id="subjects", class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.description.label(for="description", class="field-label") }}
+                <p>A brief (100-300 characters) explanation of the contents of this document.</p>
+                {{ form.description(id="description", class="form-control", minlength="100", maxlength="300") }}
+                <p id="description-character-count" class="character-counter">300 characters remaining</p>
+            </div>
+            <div class="form-group">
+                {{ form.date_published.label(for="date_published", class="field-label") }}
+                <p>This document's date of publication by agency.</p>
+                {{ form.date_published(id="date_published", class="form-control", placeholder="MM/DD/YYYY") }}
+            </div>
+            <div class="form-group">
+                {{ form.report_type.label(for="report_type", class="field-label") }}
+                <p>Use list of the most common kinds of reports and pick the one closest to what you are submitting.</p>
+                {{ form.report_type(id="report_type", class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.language.label(for="language", class="field-label") }}
+                <p>If the publication is written in a language other than English, pick the language from the dropdown
+                    list. English is the default choice.</p>
+                {{ form.language(id="language", class="form-control") }}
+            </div>
+            <br><hr><br>
+            <h2>Dates Covered (required)</h2>
+            <p>You must enter either a Fiscal Year or a Calendar Year. You may enter both if applicable.</p>
+            <div class="form-group">
+                {{ form.fiscal_year.label(for="fiscal_year", class="field-label") }}
+                <p>The fiscal year covered by this publication. If multiple fiscal years are covered, select "Add more"
+                    to add additional years.</p>
+                {{ form.fiscal_year(id="fiscal_year", class="form-control", maxlength="4") }}
+            </div>
+            <div class="form-group">
+                {{ form.calendar_year.label(for="calendar_year", class="field-label") }}
+                {{ form.calendar_year(id="calendar_year", class="form-control", maxlength="4") }}
+            </div>
+            <br><hr><br>
+            <h2>Places Covered</h2>
+            <p>If applicable, select an associated borough, Community Board District, school district and/or place name.
+            </p>
+            <div class="form-group">
+                {{ form.borough.label(for="borough", class="field-label") }}
+                <p>The borough associated with this publication. Required if applicable.</p>
+                {{ form.borough(id="borough", class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.school_district.label(for="school_district", class="field-label") }}
+                <p>The school district(s) associated with this publication. Required if applicable.</p>
+                {{ form.school_district(id="school_district", class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.community_board.label(for="community_board", class="field-label") }}
+                <p>The community board district(s) associated with this publication. Required if applicable.</p>
+                {{ form.community_board(id="community_board", class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.place_other.label(for="place_other", class="field-label") }}
+                <p>The place associated with this publication. Required if applicable.</p>
+                {{ form.place_other(id="place_other", class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.submit_field(class="btn btn-primary") }}
+            </div>
+        </form>
+    </div>
+{% endblock %}
+
+{% block custom_script %}
+    <script type="text/javascript" src="{{ url_for('static', filename='js/plugins/jquery.mask.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/submit.js') }}"></script>
 {% endblock %}

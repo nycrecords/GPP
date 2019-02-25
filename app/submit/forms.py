@@ -12,17 +12,19 @@ from wtforms.validators import Optional
 
 
 class SubmitForm(FlaskForm):
-    title = StringField('Title', validators=[DataRequired(), Length(min=10, max=150)])
+    title = StringField('Title (required)', validators=[DataRequired(), Length(min=10, max=150)])
     subtitle = StringField('Sub-Title', validators=[Optional(), Length(min=0, max=150)])
-    agency = SelectField('Agency', choices=[], validators=[DataRequired()])
+    agency = SelectField('Agency (required)', choices=[], validators=[DataRequired()])
     additional_creators = StringField('Additional Creator(s)', validators=[Optional(), Length(min=0, max=150)])
-    subjects = SelectMultipleField('Subject(s)', choices=[], validators=[DataRequired()])  # TODO (gzhou): Add custom validator for max of three subjects
-    description = TextAreaField('Description', validators=[DataRequired(), Length(min=100, max=200)])
-    date_published = DateField('Date Published', validators=[DataRequired()])
-    report_type = SelectField('Report Type', choices=[], validators=[DataRequired()])
+    subjects = SelectMultipleField('Subject(s) (required)', choices=[], validators=[DataRequired()])  # TODO (gzhou): Add custom validator for max of three subjects
+    description = TextAreaField('Description (required)', validators=[DataRequired(), Length(min=100, max=200)])
+    date_published = DateField('Date Published (required)', validators=[DataRequired()])
+    report_type = SelectField('Report Type (required)', choices=[], validators=[DataRequired()])
+    language = SelectField('Language (required)', choices=[], validators=[DataRequired()])
     fiscal_year = IntegerField('Associated Year - Fiscal', validators=[Optional(), Length(max=4)])  # TODO (gzhou): One of fiscal or calendar is required
     calendar_year = IntegerField('Associated Year - Calendar', validators=[Optional()])
     borough = SelectMultipleField('Associated Borough(s)', choices=[], validators=[Optional()])
     school_district = SelectMultipleField('Associated School District(s)', choices=[], validators=[Optional()])
+    community_board = SelectMultipleField('Associated Community Board District(s)', choices=[], validators=[Optional()])
     place_other = StringField('Associated Place (Other)', validators=[Optional(), Length(min=0, max=150)])
     submit_field = SubmitField('Submit Publication')
