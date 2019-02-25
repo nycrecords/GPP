@@ -10,6 +10,12 @@ from wtforms.validators import DataRequired
 from wtforms.validators import Length
 from wtforms.validators import Optional
 
+from app.constants.boroughs import BOROUGH_LIST
+from app.constants.community_board_districts import COMMUNITY_BOARD_DISTRICT_LIST
+from app.constants.report_types import REPORT_TYPE_LIST
+from app.constants.school_districts import SCHOOL_DISTRICT_LIST
+from app.constants.subjects import SUBJECT_LIST
+
 
 class SubmitForm(FlaskForm):
     title = StringField('Title', validators=[DataRequired(), Length(min=10, max=150)])
@@ -20,9 +26,19 @@ class SubmitForm(FlaskForm):
     description = TextAreaField('Description', validators=[DataRequired(), Length(min=100, max=200)])
     date_published = DateField('Date Published', validators=[DataRequired()])
     report_type = SelectField('Report Type', choices=[], validators=[DataRequired()])
-    fiscal_year = IntegerField('Associated Year - Fiscal', validators=[Optional(), Length(max=4)])  # TODO (gzhou): One of fiscal or calendar is required
-    calendar_year = IntegerField('Associated Year - Calendar', validators=[Optional()])
-    borough = SelectMultipleField('Associated Borough(s)', choices=[], validators=[Optional()])
-    school_district = SelectMultipleField('Associated School District(s)', choices=[], validators=[Optional()])
-    place_other = StringField('Associated Place (Other)', validators=[Optional(), Length(min=0, max=150)])
+    fiscal_years = IntegerField('Associated Year - Fiscal', validators=[Optional(), Length(max=4)])  # TODO (gzhou): One of fiscal or calendar is required
+    calendar_years = IntegerField('Associated Year - Calendar', validators=[Optional()])
+    boroughs = SelectMultipleField('Associated Borough(s)', choices=[], validators=[Optional()])
+    school_districts = SelectMultipleField('Associated School District(s)', choices=[], validators=[Optional()])
+    community_board_districts = SelectMultipleField(
+        'Associated Community Board District(s)', choices=[], validators=[Optional()])
+    place_others = StringField('Associated Place (Other)', validators=[Optional(), Length(min=0, max=150)])
     submit_field = SubmitField('Submit Publication')
+
+    def __init__(self):
+        super(SubmitForm, self).__init__()
+        self.subjects.choices = [(s, s) for s in SUBJECT_LIST]
+        self.report_type.choices = [(r, r) for r in REPORT_TYPE_LIST]
+        self.boroughs.choices = [(b, b) for b in BOROUGH_LIST]
+        self.school_districts.choices = [(sd, sd) for sd in SCHOOL_DISTRICT_LIST]
+        self.community_board_districts.choices = [(c, c) for c in COMMUNITY_BOARD_DISTRICT_LIST]

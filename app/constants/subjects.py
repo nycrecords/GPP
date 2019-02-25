@@ -179,7 +179,7 @@ WOMEN = 'Women'
 WORLD_TRADE_CENTER = 'World Trade Center'
 YOUTH = 'Youth'
 
-SUBJECTS_LIST = [
+SUBJECT_LIST = [
     ACCOUNTING,
     ADVERTISING,
     AGED,

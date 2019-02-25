@@ -11,6 +11,7 @@ class Config(object):
     NYC_GOV_BASE = 'www1.nyc.gov'
 
     SQLALCHEMY_DATABASE_URI = (os.environ.get('DATABASE_URL'))
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
 
     # Redis Settings
     REDIS_HOST = os.environ.get('REDIS_HOST') or 'localhost'

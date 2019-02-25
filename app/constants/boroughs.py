@@ -1,13 +1,12 @@
-BRONX = 'Bronx'
-BROOKLYN = 'Brooklyn'
-MANHATTAN = 'Manhattan'
-QUEENS = 'Queens'
-STATEN_ISLAND = 'Staten Island'
+from enum import Enum
 
-BOROUGH_LIST = [
-    BRONX,
-    BROOKLYN,
-    MANHATTAN,
-    QUEENS,
-    STATEN_ISLAND,
-]
+
+class BoroughEnum(Enum):
+    BRONX = 'Bronx'
+    BROOKLYN = 'Brooklyn'
+    MANHATTAN = 'Manhattan'
+    QUEENS = 'Queens'
+    STATEN_ISLAND = 'Staten Island'
+
+
+BOROUGH_LIST = [b.value for b in BoroughEnum]
